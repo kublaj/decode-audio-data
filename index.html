@@ -70,10 +70,12 @@ function getData() {
 play.onclick = function() {
   getData();
   source.start(0);
+  play.setAttribute('disabled', 'disabled');
 }
 
 stop.onclick = function() {
   source.stop(0);
+  play.removeAttribute('disabled');
 }
 
 
